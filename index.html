@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lance's Portfolio</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     <!-- <iframe src="sidebar.html" width="300" height="500" title="Sidebar Content"></iframe> -->
-
+    <div id="header-placeholder"></div>
     <div class="container">
         <h1 id="main-heading">Welcome to my Portfolio!</h1>
         <p>MEOW</p>
@@ -18,11 +20,10 @@
 
     <script src="https://jsdelivr.net"></script>
     <script>
-        // Fetch and insert the header
-        fetch('link.html')
+        fetch('header.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('link-placeholder').innerHTML = data;
+                document.getElementById('header-placeholder').innerHTML = data;
             });
     </script>
 </body>
