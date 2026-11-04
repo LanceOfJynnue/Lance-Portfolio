@@ -1,16 +1,5 @@
 <!-- 'Navigation Bar -->
 <div class="sticky-top">
-    <div class="collapse" id="sidemenu">
-        <div class="sidemenu menu-bg" style="height:1200px;">
-            <button type="button" class="btn-close fs-4 f-color" onclick="sidemenuclose()"></button>
-            <ul class="nonlist me-auto mb-2 mb-lg-0 pr-1 py-2 fs-4">
-                <li><a class="dropdown-item f-color" href="about.html">About Me</a></li>
-                <li><a class="dropdown-item f-color" href="projects.html">Projects</a></li>
-                <li><a class="dropdown-item f-color" href="socials.html">Pages and Socials</a></li>
-                <li><a class="dropdown-item f-color" href="Earl Lance Robert Morales Resume.pdf">Resume</a></li>
-            </ul>
-        </div>
-    </div>
     
     <nav class="navbar navbar-expand-lg navbar-light navbar-bg px-lg-3 pb-5" style="z-index:0">
         <table style="margin:0;">
@@ -28,10 +17,19 @@
                 <ul class="nonlist me-auto mb-2 mb-lg-0">
                     <div class="d-flex">
                         <li class="nav-item">
-                            <a class="nav-link active me-2 f-color" onclick="sidemenuopen()"><i class="bi bi-list fs-5 me-1"></i> Menu</a>
+                            <a class="nav-link active me-2 f-color" href="index.html"><i class="bi bi-house fs-5 me-1"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active me-2 f-color" href="index.php"><i class="bi bi-house fs-5 me-1"></i> Home</a>
+                            <a class="nav-link active me-2 f-color" href="projects.html"><i class="bi bi-house fs-5 me-1"></i> Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active me-2 f-color" href="socials.html"><i class="bi bi-house fs-5 me-1"></i> Socials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active me-2 f-color" href="index.html"><i class="bi bi-house fs-5 me-1"></i> Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active me-2 f-color" href="about.html"><i class="bi bi-house fs-5 me-1"></i> About Me</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active me-2 f-color" href="https://web.facebook.com/profile.php?id=61594949132556" target="_blank"><i class="bi bi-facebook fs-5 me-1"></i> FB Page</a>
@@ -42,12 +40,3 @@
         </div>
     </nav>
 </div>
-
-<script>
-    function sidemenuopen() {
-        document.getElementById('sidemenu').removeAttribute("class", "collapse");
-    }
-    function sidemenuclose() {
-        document.getElementById('sidemenu').setAttribute("class", "collapse");
-    }
-</script>
