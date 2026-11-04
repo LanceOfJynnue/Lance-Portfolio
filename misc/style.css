@@ -114,18 +114,6 @@
     color: var(--orange_gold);
 }
 
-.graf-color{
-    background: -webkit-linear-gradient(var(--gold), var(--orange_gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.icon-color{
-    background: -webkit-linear-gradient(var(--gold), var(--orange_gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .modal-color{
     color: var(--fbc_color);
 }
