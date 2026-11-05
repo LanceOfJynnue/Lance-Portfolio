@@ -23,8 +23,8 @@
 /*Color Palette*/
 
 :root{
-    --fbc_color: #303183;
-    --fbc_color_light: #6364c4;
+    --base_color: #303183;
+    --base_color_light: #6364c4;
     --pale_blue: #6060ff;
     --dark_blue: #222549;
     --blue: #3e438a;
@@ -49,7 +49,7 @@
 }
 
 .navbar-bg{
-    background-image: linear-gradient(var(--fbc_color), var(--fbc_color_light), var(--transparent));
+    background-image: linear-gradient(var(--base_color), var(--base_color_light), var(--transparent));
 }
 
 .button-bg{
@@ -83,7 +83,7 @@
 }
 
 .hf-color{
-    color: var(--fbc_color);
+    color: var(--base_color);
 }
 
 .f-color{
@@ -98,12 +98,12 @@
   color: var(--gray);
 }
 
-.fbcf-color{
-    color: var(--fbc_color);
+.basef-color{
+    color: var(--base_color);
 }
 
-.fbclf-color{
-    color: var(--fbc_color_light);
+.baself-color{
+    color: var(--base_color_light);
 }
 
 .goldf-color{
@@ -115,7 +115,7 @@
 }
 
 .modal-color{
-    color: var(--fbc_color);
+    color: var(--base_color);
 }
 
 body {
@@ -281,7 +281,7 @@ body {
     width: 75px;
     height: 75px;
     border: 15px solid #dddddd;
-    border-top-color: var(--fbc_color);
+    border-top-color: var(--base_color);
     border-radius: 50%;
     animation: loading 0.75s ease infinite;
 }
