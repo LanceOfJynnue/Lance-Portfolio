@@ -90,14 +90,6 @@
     color: var(--white);
 }
 
-.fform-color{
-    color: var(--black);
-}
-
-.formf-color{
-  color: var(--gray);
-}
-
 .basef-color{
     color: var(--base_color);
 }
@@ -114,10 +106,6 @@
     color: var(--orange_gold);
 }
 
-.modal-color{
-    color: var(--base_color);
-}
-
 body {
     position: relative;
     height: 100%;
@@ -132,16 +120,10 @@ body {
     padding: 0;
   }
 
-.logo{
-    width: 50px;
-    height: 50px;
-}
-
 .fit_image{
     width: 100%;
     height: 100%;
 }
-
 
 .nonlist {
     list-style: none;
@@ -167,67 +149,13 @@ body {
     padding: 0;
 }
 
-/* The Modal (background) */
-.loginmodal {
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .loginmodal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .loginclose {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .loginclose:hover,
-  .loginclose:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .login-form {
-    background-color: #fefefe;
-    margin: 8% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; 
-  }
-
-  .login-alert{
-    position: fixed;
-    top: 25px;
-    right: 25px;
-  }
-
 #dashboard-menu{
     position: fixed;
     height: 100%;
 }
 
-.sched-font{
-    font-size: 100%;
-}
-
-#announcement_carousel {
+/*
+#carousel {
     height: 600px;
 }
 .carousel-item .d-block {
@@ -236,6 +164,7 @@ body {
     max-width: 100%;
     margin: auto;
 }
+*/
 
 @media screen and (max-width: 992px){
     #dashboard-menu{
@@ -258,6 +187,7 @@ body {
     }
 }
 
+/*
 .loader{
     position: fixed;
     top: 0;
@@ -294,3 +224,4 @@ body {
         transform: rotate(1turn);
     }
 }
+*/
