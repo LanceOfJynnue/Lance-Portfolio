@@ -111,10 +111,11 @@
     border: 1px solid var(--base_color);
     background-color: var(--pale_blue);
     color: black;
-    width: 100%;
+    width: 95%;
     padding: 20px;
     font-family: sans-serif;
     overflow: hidden; 
+    margin: auto;
 }
 
 body {
