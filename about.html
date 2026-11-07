@@ -11,37 +11,101 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
+<style>
+    .table-font{
+        font-size: 100%;
+    }
+    
+    @media screen and (max-width: 992px){
+        .div-font{
+            font-size: 80%;
+            word-wrap: break-word;
+        }
+    }
+    
+    .loader{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f7f9fb;
+        transition: opacity 0.75s, visibility 0.75s;
+    }
+    
+    .loader-hidden{
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .loader::after{
+        content: "";
+        width: 75px;
+        height: 75px;
+        border: 15px solid #dddddd;
+        border-top-color: var(--fbc_color);
+        border-radius: 50%;
+        animation: loading 0.75s ease infinite;
+    }
+    
+    @keyframes loading {
+        from{
+            transform: rotate(0turn);
+        }
+        to{
+            transform: rotate(1turn);
+        }
+    }
+</style>
+<script>
+    window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        
+        loader.classList.add("loader-hidden");
+        document.getElementById('page').removeAttribute("class", "collapse");
+        
+        loader.addEventListener("transitionend", () => {
+            document.body.removeChild("loader");
+        })
+    })
+</script>
 <body>
-    <!-- <iframe src="sidebar.html" width="300" height="500" title="Sidebar Content"></iframe> -->
-    <div id="header-placeholder"></div>
-    <div class="container">
-        <h1 class="text-center h-font" id="main-heading">ABOUT ME</h1>
-        <p class="print-font">This page is where you can learn more about me and my journey as a game developer.</p>
-    </div>
-    <div class="container rounded-box mb-3">
-        <h2 class="text-left" id="main-heading">PASSION</h2>
-        <p class="print-font">I am Lance Morales, an aspiring game developer, and a math and programming enthusiast. It is my hobby to create things, such as illustrative arts, music, programs, and games. I started having interest in game developing when my best friend from elementary days made some simple games using pen and paper, and we played it together. From that moment, I have been passionate about creating interactive and immersive experiences through making games. I first started learning to draw and create digital art in my free time. And then an idea for a story-based game came to mind, and I progressively built upon that up until now, where I have a big plan of making it a reality; A whole universe to explore, rich in history and lore.</p>
-    </div>
-    <div class="container rounded-box mb-3">
-        <h2 class="text-left" id="main-heading">PROGRAMMING JOURNEY</h2>
-        <p class="print-font">After I discovered the world of programming due to Minecraft, I was fascinated by the ability to create maps and games within that app, and created several ones, then uploaded them into the internet. You can probably still see them on mcpedl.com by the name of LanceOfJynnue, and yes, I have only was able to create maps for the bedrock version due to not having the Java version. With my enthusiasm with math and logic, I had enjoyed the process of learning how to do simple logic and custom functions using the game's in-game command system, and later on, also adapted into making my own mods and add-ons, paired with drawing my own texture packs to fit what I needed. After that, I continued to explore different programming languages and frameworks ever since I had the chance to use a computer setup, always aiming to improve my skills and create different types of projects. At one point in my college years, during OJT, I had the opportunity to make a full website for an institution; complete with portals for students and faculty, as well as a database that manages not only their information, or their academic records, but also facilitates seamless communication between them. And now that I have graduated, I spend my time honing my craft and working on new and exciting projects, in which you can find here in my portfolio.</p>
-    </div>
-    <div class="container rounded-box mb-3">
-        <h2 class="text-left" id="main-heading">OTHER HOBBIES</h2>
-        <p class="print-font">As I previously mentioned, programming isn't my only passion. I also draw illustrations, either traditional or digital (mostly the latter), and many of them are just me drawing things on my own free time, or drawing as a gift for people. Another hobby I have is creating music, or music in general. Due to my background as a music minister in our church, I garnered skills and discovered my talents when it comes to playing instruments, mainly drums, guitar, piano, and bass. Another main hobby of mine is also creating and writing stories, in which you can also look at within the projects page here in my site, feel free to read them whenever! And due to these hobbies, all combined with my passion for creating games and programming, I was able to create a whole idea for a game series, as I also mentioned earlier. More on that on the box below!</p>
-    </div>
-    <div class="container rounded-box mb-3">
-        <h2 class="text-left" id="main-heading">THE HERO'S ODYSSEY</h2>
-        <p class="print-font">The Hero's Odyssey is a game series I have been making from scratch. It only started first as a single story-based RPG game idea, but then it grew to a point that I came up with a whole universe around it and will be making a whole series of games for it. I shall stop myself from spoiling more than necessary, so what I can only tell right now is it will be a series of stories set in the world of Jynnue, a world I built within a fictional universe I also created. It is an RPG game with magic and other fantasy elements, and I am planning to make it as interactive, immersive, and 'a bit' meta (The type of games where it somewhat knows what it is). It is a series filled with lore, mysteries, and interesting plots and characters that you may or may not encounter multiple times within the games.</p>
-    </div>
+    <div id="page" class="collapse">
+        <!-- <iframe src="sidebar.html" width="300" height="500" title="Sidebar Content"></iframe> -->
+        <div id="header-placeholder"></div>
+        <div class="container">
+            <h1 class="text-center h-font" id="main-heading">ABOUT ME</h1>
+            <p class="print-font">This page is where you can learn more about me and my journey as a game developer.</p>
+        </div>
+        <div class="container rounded-box mb-3">
+            <h2 class="text-left" id="main-heading">PASSION</h2>
+            <p class="print-font">I am Lance Morales, an aspiring game developer, and a math and programming enthusiast. It is my hobby to create things, such as illustrative arts, music, programs, and games. I started having interest in game developing when my best friend from elementary days made some simple games using pen and paper, and we played it together. From that moment, I have been passionate about creating interactive and immersive experiences through making games. I first started learning to draw and create digital art in my free time. And then an idea for a story-based game came to mind, and I progressively built upon that up until now, where I have a big plan of making it a reality; A whole universe to explore, rich in history and lore.</p>
+        </div>
+        <div class="container rounded-box mb-3">
+            <h2 class="text-left" id="main-heading">PROGRAMMING JOURNEY</h2>
+            <p class="print-font">After I discovered the world of programming due to Minecraft, I was fascinated by the ability to create maps and games within that app, and created several ones, then uploaded them into the internet. You can probably still see them on mcpedl.com by the name of LanceOfJynnue, and yes, I have only was able to create maps for the bedrock version due to not having the Java version. With my enthusiasm with math and logic, I had enjoyed the process of learning how to do simple logic and custom functions using the game's in-game command system, and later on, also adapted into making my own mods and add-ons, paired with drawing my own texture packs to fit what I needed. After that, I continued to explore different programming languages and frameworks ever since I had the chance to use a computer setup, always aiming to improve my skills and create different types of projects. At one point in my college years, during OJT, I had the opportunity to make a full website for an institution; complete with portals for students and faculty, as well as a database that manages not only their information, or their academic records, but also facilitates seamless communication between them. And now that I have graduated, I spend my time honing my craft and working on new and exciting projects, in which you can find here in my portfolio.</p>
+        </div>
+        <div class="container rounded-box mb-3">
+            <h2 class="text-left" id="main-heading">OTHER HOBBIES</h2>
+            <p class="print-font">As I previously mentioned, programming isn't my only passion. I also draw illustrations, either traditional or digital (mostly the latter), and many of them are just me drawing things on my own free time, or drawing as a gift for people. Another hobby I have is creating music, or music in general. Due to my background as a music minister in our church, I garnered skills and discovered my talents when it comes to playing instruments, mainly drums, guitar, piano, and bass. Another main hobby of mine is also creating and writing stories, in which you can also look at within the projects page here in my site, feel free to read them whenever! And due to these hobbies, all combined with my passion for creating games and programming, I was able to create a whole idea for a game series, as I also mentioned earlier. More on that on the box below!</p>
+        </div>
+        <div class="container rounded-box mb-3">
+            <h2 class="text-left" id="main-heading">THE HERO'S ODYSSEY</h2>
+            <p class="print-font">The Hero's Odyssey is a game series I have been making from scratch. It only started first as a single story-based RPG game idea, but then it grew to a point that I came up with a whole universe around it and will be making a whole series of games for it. I shall stop myself from spoiling more than necessary, so what I can only tell right now is it will be a series of stories set in the world of Jynnue, a world I built within a fictional universe I also created. It is an RPG game with magic and other fantasy elements, and I am planning to make it as interactive, immersive, and 'a bit' meta (The type of games where it somewhat knows what it is). It is a series filled with lore, mysteries, and interesting plots and characters that you may or may not encounter multiple times within the games.</p>
+        </div>
 
-    <script src="https://jsdelivr.net"></script>
-    <script>
-        fetch('misc/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
-    </script>
+        <script src="https://jsdelivr.net"></script>
+        <script>
+            fetch('misc/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+        </script>
+    </div>
+    <div class="loader"></div>
 </body>
 </html>
