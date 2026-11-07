@@ -186,19 +186,8 @@ body {
     #main-content{
         margin-top: 60px;
     }
-    .sched-font{
-        font-size: 80%;
-        word-wrap: break-word;
-    }
-    #announcement_carousel {
-        height: 300px;
-    }
-    .carousel-item {
-        max-height: 300px;
-    }
 }
 
-/*
 .loader{
     position: fixed;
     top: 0;
@@ -235,4 +224,3 @@ body {
         transform: rotate(1turn);
     }
 }
-*/
