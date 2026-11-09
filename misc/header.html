@@ -9,7 +9,7 @@
             </tr>
         </table>
         <div class="container-fluid">
-            <button class="navbar-toggler bg-light mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-light mx-auto" type="button" id="menuToggle">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse" id="navbarSupportedContent">
@@ -39,3 +39,18 @@
         </div>
     </nav>
 </div>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navDiv = document.getElementById('navbarSupportedContent');
+
+  menuToggle.addEventListener('click', () => {
+    if (navDiv.style.display === 'none') {
+      navDiv.style.display = 'block';
+      menuToggle.textContent = 'Hide Content';
+    } else {
+      navDiv.style.display = 'none';
+      menuToggle.textContent = 'Show Content';
+    }
+  });
+</script>
